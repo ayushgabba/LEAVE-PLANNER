@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Input and Description Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="date"], textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<form id="submissionForm" action="#" method="post">
+    <label for="date">Select a Date:</label>
+    <input type="date" id="date" name="date">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" placeholder="Enter your description here..."></textarea>
+
+    <button type="button" id="submitBtn">Submit</button>
+</form>
+
+<script>
+    // Add an event listener to the submit button
+    document.getElementById("submitBtn").addEventListener("click", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        
+        // Redirect to the "thankyou.html" page
+        window.location.href = "thankyou.html";
+    });
+</script>
+
+</body>
+</html>
